@@ -1,11 +1,11 @@
-About colmena
-=============
+About colmena-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/colmena-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/exalearn/colmena
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/colmena-feedstock/blob/main/LICENSE.txt)
 
 Summary: colmena: Intelligent Steerable Pipelines on HPC
 
