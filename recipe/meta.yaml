@@ -1,5 +1,5 @@
 {% set name = "colmena" %}
-{% set version = "0.4.4" %}
+{% set version = "0.4.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/exalearn/colmena/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: c4c0f2672cc7b66f2f69120e524e404c76b0f082df1d2f3fea0ed8b48bc3944b
+  sha256: a56557da9638e50ef9190353a703db590ec7a53d9d10f1d30f21e781dd4371cf
 
 build:
   noarch: python
