@@ -1,5 +1,5 @@
 {% set name = "colmena" %}
-{% set version = "0.4.5" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/exalearn/colmena/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: a56557da9638e50ef9190353a703db590ec7a53d9d10f1d30f21e781dd4371cf
+  sha256: 6fd74ce1e309179adcb94be38247368f06ddd05f87f489a91d42d6edf9f07f73
 
 build:
   noarch: python
@@ -24,7 +24,7 @@ requirements:
     - proxystore >=0.3.3
     - pydantic ==1.*
     - python >=3.6
-    - redis-py ==3.4.*
+    - redis-py >=4.3
 
 test:
   imports:
