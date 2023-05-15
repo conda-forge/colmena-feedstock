@@ -24,7 +24,7 @@ requirements:
     - proxystore >=0.3.3
     - pydantic ==1.*
     - python >=3.6
-    - redis-py ==3.4.*
+    - redis-py >=4.3
 
 test:
   imports:
