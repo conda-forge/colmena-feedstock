@@ -21,7 +21,7 @@ requirements:
   run:
     - numpy
     - parsl >=1
-    - proxystore >=0.3.3
+    - proxystore =0.5.*
     - pydantic ==1.*
     - python >=3.6
     - redis-py >=4.3
