@@ -6,25 +6,24 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/exalearn/colmena/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: fff3fd2fc136f3d7333ac065819d0a0d02cdb383dbf31aa539257cfc8beff07e
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/colmena-{{ version }}.tar.gz
+  sha256: 475f2d511549b743d0c1a9d9f1d12df534918d6f0506b4f4656875f9718b29f1
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
 
 requirements:
   host:
+    - python >=3.8
     - pip
-    - python >=3.6
   run:
-    - numpy
-    - parsl >=1
-    - proxystore =0.5.*
+    - python >=3.8
+    - parsl >=2022
     - pydantic ==1.*
-    - python >=3.6
     - redis-py >=4.3
+    - proxystore ==0.5.*
 
 test:
   imports:
