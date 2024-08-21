@@ -1,5 +1,5 @@
 {% set name = "colmena" %}
-{% set version = "0.6.1" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/colmena-{{ version }}.tar.gz
-  sha256: f242b309657dbdfc296f6b6cb03c61f8f4daf5919c170f3b81602fb7c3ab4d08
+  sha256: 1fb9b6e8a2e520b7e133543e3a01baf95cc6602660975477aa660334c0de5327
 
 build:
   noarch: python
@@ -21,9 +21,9 @@ requirements:
   run:
     - python >=3.8
     - parsl >=2022
-    - pydantic ==1.*
+    - pydantic >=2,<3
     - redis-py >=4.3
-    - proxystore >=0.5.0,<0.7.0
+    - proxystore >=0.5.0,<0.8.0
 
 test:
   imports:
