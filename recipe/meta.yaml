@@ -1,5 +1,5 @@
 {% set name = "colmena" %}
-{% set version = "0.7.1" %}
+{% set version = "0.7.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/colmena-{{ version }}.tar.gz
-  sha256: 51c2845004023815e868e088c37e02e1dadc43accbaba4ee22ac51dc950b78d8
+  sha256: b9ef93cadbd2e9b8dfa237f56f5036a47e71a311b0ad5d79d2f4dac015f4fdb7
 
 build:
   noarch: python
