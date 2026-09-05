@@ -34,7 +34,9 @@ tests:
       imports:
         - colmena
       pip_check: true
-      python_version: ${{ python_min }}
+      python_version:
+        - ${{ python_min }}
+        - "*"
 
 about:
   summary: "colmena: Intelligent Steerable Pipelines on HPC"
