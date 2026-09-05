@@ -1,0 +1,48 @@
+schema_version: 1
+
+context:
+  name: colmena
+  version: "0.7.2"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/colmena-${{ version }}.tar.gz
+  sha256: b9ef93cadbd2e9b8dfa237f56f5036a47e71a311b0ad5d79d2f4dac015f4fdb7
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - parsl >=2022
+    - pydantic >=2,<3
+    - redis-py >=4.3
+    - proxystore >=0.5.0
+
+tests:
+  - python:
+      imports:
+        - colmena
+      pip_check: true
+      python_version: ${{ python_min }}
+
+about:
+  summary: "colmena: Intelligent Steerable Pipelines on HPC"
+  license: Apache-2.0
+  license_file: LICENSE.txt
+  homepage: https://github.com/exalearn/colmena
+
+extra:
+  recipe-maintainers:
+    - WardLT
+    - jan-janssen
